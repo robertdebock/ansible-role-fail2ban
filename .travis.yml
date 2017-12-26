@@ -1,0 +1,25 @@
+---
+sudo: required
+language: python
+services: docker
+
+env:
+  - ansible_version=">=2.2,<2.3"
+  - ansible_version=">=2.3,<2.4"
+  - ansible_version=">=2.4,<2.5"
+
+cache:
+  - pip
+
+install:
+  - pip install --upgrade pip
+  - pip install ansible"${ansible_version}"
+  - pip install molecule
+  - pip install docker-py
+
+script:
+  - molecule test
+
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
+  email: false

@@ -1,0 +1,43 @@
+---
+galaxy_info:
+  author: Robert de Bock
+  description: Provides Postfix for your system.
+  license: Apache License, Version 2.0
+  min_ansible_version: 2.2
+  min_ansible_container_version: 0.2.0
+
+  platforms:
+    - name: Alpine
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
+    - name: EL
+      versions:
+        - 6
+        - 7
+    - name: Fedora
+      versions:
+        - all
+    - name: opensuse
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - artful
+        - zesty
+
+  galaxy_tags:
+    - fail2ban
+    - installer
+    - package
+    - Alpine
+    - CentOS
+    - Debian
+    - Fedora
+    - RHEL
+    - Ubuntu
+
+dependencies:
+  - robertdebock.epel

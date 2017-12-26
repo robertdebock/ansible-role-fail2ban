@@ -1,0 +1,22 @@
+---
+# tasks file for fail2ban
+- name: install software
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ fail2ban_packages[ansible_distribution ~ '-' ~ ansible_distribution_major_version]
+      | default(fail2ban_packages[ansible_distribution]
+      | default(fail2ban_packages['default'] )) }}"
+
+- name: start and enable software
+  service:
+    name: "{{ item }}"
+    state: started
+    enabled: yes
+  with_items:
+    - "{{ fail2ban_services[ansible_distribution ~ '-' ~ ansible_distribution_major_version]
+      | default(fail2ban_services[ansible_distribution]
+      | default(fail2ban_services['default'] )) }}"
+  when:
+    - ansible_virtualization_type != "docker"

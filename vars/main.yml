@@ -1,0 +1,9 @@
+---
+# vars file for fail2ban
+fail2ban_packages:
+  default:
+    - fail2ban
+
+fail2ban_services:
+  default:
+    - fail2ban
