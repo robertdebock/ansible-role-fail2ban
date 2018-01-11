@@ -8,10 +8,10 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: fail2ban-alpine-3.5
-    image: alpine:3.5
   - name: fail2ban-alpine-3.6
     image: alpine:3.6
+  - name: fail2ban-alpine-3.7
+    image: alpine:3.7
   - name: fail2ban-centos-6
     image: centos:6
   - name: fail2ban-centos-7
