@@ -26,8 +26,8 @@ platforms:
     box: opensuse/openSUSE-42.2-x86_64
   - name: fail2ban-ubuntu-trusty
     box: ubuntu/trusty64
-  - name: fail2ban-ubuntu-zesty
-    box: ubuntu/zesty64
+  - name: fail2ban-ubuntu-artful
+    box: ubuntu/artful64
 provisioner:
   name: ansible
   lint:
@@ -35,6 +35,6 @@ provisioner:
 scenario:
   name: vagrant
 verifier:
-  name: testinfra
+  name: goss
   lint:
-    name: flake8
+    name: 'None'

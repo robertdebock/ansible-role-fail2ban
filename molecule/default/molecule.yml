@@ -8,6 +8,8 @@ driver:
 lint:
   name: yamllint
 platforms:
+  - name: fail2ban-archlinux
+    image: base/archlinux
   - name: fail2ban-alpine-3.6
     image: alpine:3.6
   - name: fail2ban-alpine-3.7
@@ -18,6 +20,8 @@ platforms:
     image: centos:7
   - name: fail2ban-debian-jessie
     image: debian:jessie
+  - name: fail2ban-debian-stretch
+    image: debian:stretch
   - name: fail2ban-debian-buster
     image: debian:buster
   - name: fail2ban-fedora-26
@@ -28,8 +32,13 @@ platforms:
     image: opensuse:42.2
   - name: fail2ban-opensuse-42.3
     image: opensuse:42.3
-  - name: fail2ban-ubuntu-zesty
-    image: ubuntu:zesty
+    # 14.04 LTS
+  - name: fail2ban-ubuntu-trusty
+    image: ubuntu:trusty
+    # 16.04 LTS
+  - name: fail2ban-ubuntu-xenial
+    image: ubuntu:xenial
+    # 17.04
   - name: fail2ban-ubuntu-artful
     image: ubuntu:artful
 provisioner:
