@@ -2,6 +2,7 @@
 - name: Converge
   hosts: all
   gather_facts: no
+  strategy: free
 
   roles:
     - role: ansible-role-fail2ban
