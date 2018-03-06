@@ -1,2 +1,3 @@
 ---
-- src: robertdebock.epel
+- robertdebock.bootstrap
+- robertdebock.epel

@@ -9,6 +9,7 @@ Requirements
 ------------
 
 Access to a repository containing packages, likely on the internet.
+For Red Hat systems: Extra Packages for Enterprise Linux. (Hint: robertdebock.epel)
 
 Role Variables
 --------------
@@ -18,7 +19,10 @@ None known
 Dependencies
 ------------
 
+These roles can help prepare your system.
+
 - robertdebock.bootstrap
+- robertdebock.epel
 
 Download the dependencies by issuing this command:
 ```
@@ -32,6 +36,8 @@ Example Playbook
 - hosts: servers
 
   roles:
+    - role: robertdebock.bootstrap
+    - role: robertdebock.epel
     - role: robertdebock.fail2ban
 ```
 
