@@ -37,4 +37,4 @@ scenario:
 verifier:
   name: goss
   lint:
-    name: 'None'
+    name: 'flake8'
