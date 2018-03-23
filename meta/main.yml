@@ -3,7 +3,7 @@ galaxy_info:
   author: Robert de Bock
   description: Provides Postfix for your system.
   license: Apache License, Version 2.0
-  min_ansible_version: 2.2
+  min_ansible_version: 2.3
   min_ansible_container_version: 0.2.0
 
   platforms:
