@@ -2,11 +2,7 @@
 - name: Converge
   hosts: all
   gather_facts: no
-  become: yes
 
   roles:
     - role: robertdebock.bootstrap
-
-  tasks:
-    - name: test connection
-      ping:
+    - role: ansible-role-fail2ban
