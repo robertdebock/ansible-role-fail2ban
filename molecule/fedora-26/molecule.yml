@@ -8,7 +8,7 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: bootstrap-fedora-26
+  - name: fail2ban-fedora-26
     image: fedora:26
 provisioner:
   name: ansible

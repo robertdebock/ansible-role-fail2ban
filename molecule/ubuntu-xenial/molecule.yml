@@ -9,7 +9,7 @@ lint:
   name: yamllint
 platforms:
     # 16.04 LTS
-  - name: bootstrap-ubuntu-xenial
+  - name: fail2ban-ubuntu-xenial
     image: ubuntu:xenial
 provisioner:
   name: ansible

@@ -9,7 +9,7 @@ lint:
   name: yamllint
 platforms:
     # 17.04
-  - name: bootstrap-ubuntu-artful
+  - name: fail2ban-ubuntu-artful
     image: ubuntu:artful
 provisioner:
   name: ansible

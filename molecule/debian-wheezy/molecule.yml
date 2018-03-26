@@ -8,7 +8,7 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: bootstrap-debian-wheezy
+  - name: fail2ban-debian-wheezy
     image: debian:wheezy
 provisioner:
   name: ansible

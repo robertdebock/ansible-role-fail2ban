@@ -9,7 +9,7 @@ lint:
   name: yamllint
 platforms:
     # 14.04 LTS
-  - name: bootstrap-ubuntu-trusty
+  - name: fail2ban-ubuntu-trusty
     image: ubuntu:trusty
 provisioner:
   name: ansible

@@ -8,7 +8,7 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: bootstrap-opensuse-42.3
+  - name: fail2ban-opensuse-42.3
     image: opensuse:42.3
 provisioner:
   name: ansible
