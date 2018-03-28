@@ -36,6 +36,30 @@ Download the dependencies by issuing this command:
 ansible-galaxy install --role-file requirements.yml
 ```
 
+Compatibility
+-------------
+
+This role has been tested against the following distributions and Ansible version:
+
+|distribution|ansible 2.3|ansible 2.4|ansible 2.5|
+|------------|-----------|-----------|-----------|
+|alpine-3.6|yes|yes|yes|
+|alpine-3.7|yes|yes|yes|
+|archlinux|yes|yes|yes|
+|centos-6|yes|yes|yes|
+|centos-7|yes|yes|yes|
+|debian-buster|yes|yes|yes|
+|debian-jessie|yes|yes|yes|
+|debian-stretch|yes|yes|yes|
+|debian-wheezy|yes|yes|yes|
+|fedora-26|yes|yes|yes|
+|fedora-27|yes|yes|yes|
+|opensuse-42.2|yes|yes|yes|
+|opensuse-42.3|yes|yes|yes|
+|ubuntu-artful|yes|yes|yes|
+|ubuntu-trusty|yes|yes|yes|
+|ubuntu-xenial|yes|yes|yes|
+
 Example Playbook
 ----------------
 
