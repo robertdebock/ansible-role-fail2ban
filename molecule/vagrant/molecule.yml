@@ -18,10 +18,10 @@ platforms:
     box: debian/jessie64
   - name: fail2ban-debian-buster64
     box: desc/buster64
-  - name: fail2ban-fedora-26-cloud-base
-    box: fedora/26-cloud-base
   - name: fail2ban-fedora-27-cloud-base
     box: fedora/27-cloud-base
+  - name: fail2ban-fedora-28-cloud-base
+    box: fedora/28-cloud-base
   - name: fail2ban-opensuse-openSUSE-42-2-x86-64
     box: opensuse/openSUSE-42.2-x86_64
   - name: fail2ban-ubuntu-trusty
