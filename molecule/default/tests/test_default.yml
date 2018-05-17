@@ -3,6 +3,6 @@
 ---
 file:
   /usr/bin/python:
-    exists: True
+    exists: true
     owner: root
     group: root
