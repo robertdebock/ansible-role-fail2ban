@@ -8,14 +8,14 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: fail2ban-ubuntu-bionic
-    image: ubuntu:bionic
+  - name: fail2ban-ubuntu-latest
+    image: ubuntu:latest
 provisioner:
   name: ansible
   lint:
     name: ansible-lint
 scenario:
-  name: ubuntu-bionic
+  name: ubuntu-latest
 verifier:
   name: goss
   lint:

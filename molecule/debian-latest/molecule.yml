@@ -8,14 +8,14 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: fail2ban-alpine-3.7
-    image: alpine:3.7
+  - name: fail2ban-debian-latest
+    image: debian:latest
 provisioner:
   name: ansible
   lint:
     name: ansible-lint
 scenario:
-  name: alpine-3.7
+  name: debian-latest
 verifier:
   name: goss
   lint:

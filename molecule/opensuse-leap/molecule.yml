@@ -8,14 +8,14 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: fail2ban-fedora-28
-    image: fedora:28
+  - name: fail2ban-opensuse-leap
+    image: opensuse:leap
 provisioner:
   name: ansible
   lint:
     name: ansible-lint
 scenario:
-  name: fedora-28
+  name: opensuse-leap
 verifier:
   name: goss
   lint:

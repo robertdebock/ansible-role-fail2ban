@@ -8,14 +8,14 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: fail2ban-alpine-3.6
-    image: alpine:3.6
+  - name: fail2ban-centos-latest
+    image: centos:latest
 provisioner:
   name: ansible
   lint:
     name: ansible-lint
 scenario:
-  name: alpine-3.6
+  name: centos-latest
 verifier:
   name: goss
   lint:
