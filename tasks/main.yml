@@ -5,9 +5,7 @@
     name: "{{ item }}"
     state: present
   with_items:
-    - "{{ fail2ban_packages[ansible_distribution ~ '-' ~ ansible_distribution_major_version]
-      | default(fail2ban_packages[ansible_distribution]
-      | default(fail2ban_packages['default'] )) }}"
+    - "{{ fail2ban_packages }}"
 
 - name: start and enable software
   service:
@@ -15,8 +13,6 @@
     state: started
     enabled: yes
   with_items:
-    - "{{ fail2ban_services[ansible_distribution ~ '-' ~ ansible_distribution_major_version]
-      | default(fail2ban_services[ansible_distribution]
-      | default(fail2ban_services['default'] )) }}"
+    - "{{ fail2ban_service }}"
   when:
     - ansible_virtualization_type != "docker"
