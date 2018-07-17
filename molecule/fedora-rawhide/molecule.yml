@@ -10,6 +10,8 @@ lint:
 platforms:
   - name: fail2ban-fedora-rawhide
     image: fedora:rawhide
+    registry:
+      url: registry.fedoraproject.org
 provisioner:
   name: ansible
   lint:
