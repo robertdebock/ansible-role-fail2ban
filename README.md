@@ -3,7 +3,7 @@ fail2ban
 
 [![Build Status](https://travis-ci.org/robertdebock/ansible-role-fail2ban.svg?branch=master)](https://travis-ci.org/robertdebock/ansible-role-fail2ban)
 
-Provides Postfix for your system.
+Provides fail2ban for your system.
 
 Context
 --------
