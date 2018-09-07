@@ -14,10 +14,6 @@ galaxy_info:
     - name: ArchLinux
       version:
         - all
-    - name: CentOS
-      version:
-        - 6
-        - 7
     - name: Debian
       versions:
         - all
