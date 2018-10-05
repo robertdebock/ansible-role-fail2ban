@@ -1,13 +1,11 @@
 ---
 # tasks file for fail2ban
-- name: install software
+- name: install fail2ban
   package:
-    name: "{{ item }}"
-    state: present
-  with_items:
-    - "{{ fail2ban_packages }}"
+    name: "{{ fail2ban_pacakges }}"
+    state: "{{ fail2ban_package_state }}"
 
-- name: start and enable software
+- name: start and enable fail2ban
   service:
     name: "{{ item }}"
     state: started

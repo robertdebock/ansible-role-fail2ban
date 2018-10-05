@@ -1,0 +1,50 @@
+---
+dependency:
+  name: galaxy
+  options:
+    role-file: requirements.yml
+driver:
+  name: docker
+lint:
+  name: yamllint
+platforms:
+  - name: fail2ban-alpine-edge
+    image: alpine:edge
+    command: sh -c "while true ; do sleep 1 ; done"
+  - name: fail2ban-alpine-latest
+    image: alpine:latest
+    command: sh -c "while true ; do sleep 1 ; done"
+  - name: fail2ban-archlinux
+    image: base/archlinux
+  - name: fail2ban-centos-6
+    image: centos:6
+  - name: fail2ban-centos-latest
+    image: centos:latest
+  - name: fail2ban-debian-latest
+    image: debian:latest
+  - name: fail2ban-debian-stable
+    image: debian:stable
+  - name: fail2ban-debian-unstable
+    image: debian:unstable
+  - name: fail2ban-fedora-latest
+    image: fedora:latest
+  - name: fail2ban-fedora-rawhide
+    image: fedora:rawhide
+  - name: fail2ban-opensuse-leap
+    image: opensuse:leap
+  - name: fail2ban-opensuse-tumbleweed
+    image: opensuse:tumbleweed
+  - name: fail2ban-ubuntu-artful
+    image: ubuntu:artful
+  - name: fail2ban-ubuntu-devel
+    image: ubuntu:devel
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+scenario:
+  name: default
+verifier:
+  name: goss
+  lint:
+    name: yamllint
