@@ -2,7 +2,7 @@
 # tasks file for fail2ban
 - name: install fail2ban
   package:
-    name: "{{ fail2ban_pacakges }}"
+    name: "{{ fail2ban_packages }}"
     state: "{{ fail2ban_package_state }}"
 
 - name: start and enable fail2ban
