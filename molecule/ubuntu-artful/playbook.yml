@@ -4,5 +4,5 @@
   gather_facts: false
 
   roles:
-    - role: robertdebock.bootstrap
-    - role: ansible-role-fail2ban
+    - robertdebock.bootstrap
+    - ansible-role-fail2ban
