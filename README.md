@@ -3,8 +3,7 @@ fail2ban
 
 [![Build Status](https://travis-ci.org/robertdebock/ansible-role-fail2ban.svg?branch=master)](https://travis-ci.org/robertdebock/ansible-role-fail2ban)
 
-Provides fail2ban for your system.
-
+The purpose of this role is to install and configure fail2ban on your system.
 
 Example Playbook
 ----------------

@@ -1,1 +1,0 @@
-Provides fail2ban for your system.
