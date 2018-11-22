@@ -13,4 +13,4 @@
   with_items:
     - "{{ fail2ban_service }}"
   when:
-    - ansible_virtualization_type != "docker"
+    - ansible_virtualization_type != "docker" or fail2ban_ignore_docker

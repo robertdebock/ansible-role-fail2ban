@@ -33,6 +33,11 @@ These variables are set in `defaults/main.yml`:
 # To update all packages installed by this roles, set `fail2ban_package_state` to `latest`.
 fail2ban_package_state: present
 
+# Some Docker containers do not allow managing services, rebooting and writing
+# to some locations in /etc. The role skips tasks that will typically fail in
+# Docker. With this parameter you can tell the role to -not- skip these tasks.
+fail2ban_ignore_docker: yes
+
 ```
 
 Requirements
@@ -94,9 +99,12 @@ To test this role locally please use [Molecule](https://github.com/metacloud/mol
 pip install molecule
 molecule test
 ```
+
+To test on Amazon EC2, configure [~/.aws/credentials](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/credentials.html) and `export AWS_REGION=eu-central-1` before running `molecule test --scenario-name ec2`.
+
 There are many specific scenarios available, please have a look in the `molecule/` directory.
 
-Run the [ansible-galaxy[(https://github.com/ansible/galaxy-lint-rules) and [my](https://github.com/robertdebock/ansible-lint-rules) lint rules if you want your change to be merges:
+Run the [ansible-galaxy](https://github.com/ansible/galaxy-lint-rules) and [my](https://github.com/robertdebock/ansible-lint-rules) lint rules if you want your change to be merges:
 ```
 ansible-lint -r /path/to/galaxy-lint-rules/rules .
 ansible-lint -r /path/to/ansible-lint-rules/rules .

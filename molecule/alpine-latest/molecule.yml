@@ -13,6 +13,10 @@ platforms:
     command: sh -c "while true ; do sleep 1 ; done"
 provisioner:
   name: ansible
+  inventory:
+    group_vars:
+      all:
+        fail2ban_ignore_docker: no
   lint:
     name: ansible-lint
 scenario:
