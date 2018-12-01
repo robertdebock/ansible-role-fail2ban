@@ -43,6 +43,9 @@ platforms:
 provisioner:
   name: ansible
   inventory:
+    host_vars:
+      fail2ban-fedora-rawhide:
+        ansible_python_interpreter: /usr/bin/python3
     group_vars:
       all:
         fail2ban_ignore_docker: no
