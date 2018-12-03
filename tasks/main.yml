@@ -4,6 +4,9 @@
   package:
     name: "{{ fail2ban_packages }}"
     state: "{{ fail2ban_package_state }}"
+  register: fail2ban_install_fail2ban
+  until: fail2ban_install_fail2ban is succeeded
+  retries: 3
 
 - name: start and enable fail2ban
   service:
