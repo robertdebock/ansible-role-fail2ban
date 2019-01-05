@@ -3,13 +3,13 @@ fail2ban
 
 [![Build Status](https://travis-ci.org/robertdebock/ansible-role-fail2ban.svg?branch=master)](https://travis-ci.org/robertdebock/ansible-role-fail2ban)
 
-The purpose of this role is to install and configure fail2ban on your system.
+Install and configure fail2ban on your system.
 
 Example Playbook
 ----------------
 
 This example is taken from `molecule/default/playbook.yml`:
-```
+```yaml
 ---
 - name: Converge
   hosts: all
@@ -26,7 +26,7 @@ Role Variables
 --------------
 
 These variables are set in `defaults/main.yml`:
-```
+```yaml
 ---
 # defaults file for fail2ban
 
@@ -48,10 +48,12 @@ Requirements
 
 The following roles can be installed to ensure all requirements are met, using `ansible-galaxy install -r requirements.yml`:
 
+```yaml
 ---
 - robertdebock.bootstrap
 - robertdebock.epel
 
+```
 
 Context
 -------
@@ -105,9 +107,13 @@ To test on Amazon EC2, configure [~/.aws/credentials](https://docs.aws.amazon.co
 There are many specific scenarios available, please have a look in the `molecule/` directory.
 
 Run the [ansible-galaxy](https://github.com/ansible/galaxy-lint-rules) and [my](https://github.com/robertdebock/ansible-lint-rules) lint rules if you want your change to be merges:
-```
-ansible-lint -r /path/to/galaxy-lint-rules/rules .
-ansible-lint -r /path/to/ansible-lint-rules/rules .
+
+```shell
+git clone https://github.com/ansible/ansible-lint.git /tmp/ansible-lint
+ansible-lint -r /tmp/ansible-lint/lib/ansiblelint/rules .
+
+git clone https://github.com/robertdebock/ansible-lint /tmp/my-ansible-lint
+ansible-lint -r /tmp/my-ansible-lint/rules .
 ```
 
 License

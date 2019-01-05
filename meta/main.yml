@@ -2,7 +2,7 @@
 galaxy_info:
   author: Robert de Bock
   role_name: fail2ban
-  description: The purpose of this role is to install and configure fail2ban on your system.
+  description: Install and configure fail2ban on your system.
   license: Apache-2.0
   company: none
   min_ansible_version: 2.6
