@@ -8,8 +8,8 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: fail2ban-ubuntu-artful
-    image: ubuntu:artful
+  - name: fail2ban-ubuntu-rolling
+    image: ubuntu:rolling
 provisioner:
   name: ansible
   inventory:
@@ -19,7 +19,7 @@ provisioner:
   lint:
     name: ansible-lint
 scenario:
-  name: ubuntu-artful
+  name: ubuntu-rolling
 verifier:
   name: goss
   lint:

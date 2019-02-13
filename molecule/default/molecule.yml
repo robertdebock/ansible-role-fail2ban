@@ -34,8 +34,10 @@ platforms:
     image: opensuse:leap
   - name: fail2ban-opensuse-tumbleweed
     image: opensuse:tumbleweed
-  - name: fail2ban-ubuntu-artful
-    image: ubuntu:artful
+  - name: fail2ban-ubuntu-latest
+    image: ubuntu:latest
+  - name: fail2ban-ubuntu-rolling
+    image: ubuntu:rolling
   - name: fail2ban-ubuntu-devel
     image: ubuntu:devel
   - name: fail2ban-ubuntu-latest
