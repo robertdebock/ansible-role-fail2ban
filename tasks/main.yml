@@ -8,6 +8,32 @@
   until: fail2ban_install_fail2ban is succeeded
   retries: 3
 
+- name: configure fail2ban.conf
+  ini_file:
+    path: /etc/fail2ban/fail2ban.conf
+    section: "{{ item.section }}"
+    option: "{{ item.option }}"
+    value: "{{ item.value }}"
+  with_items:
+    - "{{ fail2ban_configuration }}"
+  notify:
+    - restart fail2ban
+  loop_control:
+    label: "{{ item.option }}"
+
+- name: configure jail.conf
+  ini_file:
+    path: /etc/fail2ban/jail.conf
+    section: "{{ item.section }}"
+    option: "{{ item.option }}"
+    value: "{{ item.value }}"
+  with_items:
+    - "{{ fail2ban_jail_configuration }}"
+  notify:
+    - restart fail2ban
+  loop_control:
+    label: "{{ item.option }}"
+
 - name: start and enable fail2ban
   service:
     name: "{{ item }}"
