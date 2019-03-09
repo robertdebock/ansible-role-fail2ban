@@ -21,7 +21,3 @@ provisioner:
     name: ansible-lint
 scenario:
   name: alpine-edge
-verifier:
-  name: goss
-  lint:
-    name: yamllint

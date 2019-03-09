@@ -20,7 +20,3 @@ provisioner:
     name: ansible-lint
 scenario:
   name: ubuntu-devel
-verifier:
-  name: goss
-  lint:
-    name: yamllint

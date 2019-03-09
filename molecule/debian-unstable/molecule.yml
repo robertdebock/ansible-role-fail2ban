@@ -20,7 +20,3 @@ provisioner:
     name: ansible-lint
 scenario:
   name: debian-unstable
-verifier:
-  name: goss
-  lint:
-    name: yamllint

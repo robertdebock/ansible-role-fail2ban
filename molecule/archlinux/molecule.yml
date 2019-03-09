@@ -20,7 +20,3 @@ provisioner:
     name: ansible-lint
 scenario:
   name: archlinux
-verifier:
-  name: goss
-  lint:
-    name: yamllint

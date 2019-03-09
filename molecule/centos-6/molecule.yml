@@ -20,7 +20,3 @@ provisioner:
     name: ansible-lint
 scenario:
   name: centos-6
-verifier:
-  name: goss
-  lint:
-    name: yamllint
