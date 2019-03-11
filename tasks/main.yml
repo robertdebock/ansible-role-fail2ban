@@ -3,7 +3,7 @@
 - name: install fail2ban
   package:
     name: "{{ fail2ban_packages }}"
-    state: "{{ fail2ban_package_state }}"
+    state: present
   register: fail2ban_install_fail2ban
   until: fail2ban_install_fail2ban is succeeded
   retries: 3
