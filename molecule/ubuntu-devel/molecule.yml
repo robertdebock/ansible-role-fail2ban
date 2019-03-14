@@ -3,19 +3,15 @@ dependency:
   name: galaxy
   options:
     role-file: requirements.yml
-driver:
-  name: docker
 lint:
   name: yamllint
+driver:
+  name: docker
 platforms:
   - name: fail2ban-ubuntu-devel
     image: ubuntu:devel
 provisioner:
   name: ansible
-  inventory:
-    group_vars:
-      all:
-        fail2ban_ignore_docker: no
   lint:
     name: ansible-lint
 scenario:

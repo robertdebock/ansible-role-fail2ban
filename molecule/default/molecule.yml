@@ -3,10 +3,10 @@ dependency:
   name: galaxy
   options:
     role-file: requirements.yml
-driver:
-  name: docker
 lint:
   name: yamllint
+driver:
+  name: docker
 platforms:
   - name: fail2ban-alpine-edge
     image: alpine:edge
@@ -42,17 +42,7 @@ platforms:
     image: ubuntu:latest
 provisioner:
   name: ansible
-  inventory:
-    host_vars:
-      fail2ban-fedora-rawhide:
-        ansible_python_interpreter: /usr/bin/python3
-    group_vars:
-      all:
-        fail2ban_ignore_docker: no
   lint:
     name: ansible-lint
-  config_options:
-    defaults:
-      callback_plugins: /usr/lib/python2.7/site-packages/ara/plugins/callbacks
 scenario:
   name: default
