@@ -1,9 +1,8 @@
 ---
-- name: Converge
+- name: Prepare
   hosts: all
-  gather_facts: false
+  gather_facts: no
 
   roles:
     - robertdebock.bootstrap
     - robertdebock.epel
-    - ansible-role-fail2ban

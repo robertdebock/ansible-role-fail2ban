@@ -1,8 +1,0 @@
----
-- name: Converge
-  hosts: all
-  gather_facts: false
-
-  roles:
-    - robertdebock.bootstrap
-    - ansible-role-fail2ban
