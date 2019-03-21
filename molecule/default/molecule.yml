@@ -52,9 +52,6 @@ platforms:
   - name: fail2ban-ubuntu-devel
     image: ubuntu:devel
     pre_build_image: yes
-  - name: fail2ban-ubuntu-latest
-    image: ubuntu:latest
-    pre_build_image: yes
 provisioner:
   name: ansible
   playbooks:
