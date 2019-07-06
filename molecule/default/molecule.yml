@@ -41,7 +41,7 @@ platforms:
     image: fedora:rawhide
     pre_build_image: yes
   - name: fail2ban-opensuse-leap
-    image: opensuse:leap
+    image: opensuse/leap
     pre_build_image: yes
   - name: fail2ban-ubuntu-latest
     image: ubuntu:latest
