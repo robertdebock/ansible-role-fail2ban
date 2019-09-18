@@ -17,11 +17,5 @@ provisioner:
   playbooks:
     prepare: ../resources/prepare.yml
     converge: ../resources/playbook.yml
-  lint:
-    name: ansible-lint
-    options:
-      exclude:
-        - meta/version.yml
-        - meta/exception.yml
 scenario:
   name: alpine-edge
