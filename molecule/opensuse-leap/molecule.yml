@@ -16,5 +16,9 @@ provisioner:
   playbooks:
     prepare: ../resources/prepare.yml
     converge: ../resources/playbook.yml
+  config_options:
+    defaults:
+      stdout_callback: yaml
+      bin_ansible_callbacks: true
 scenario:
   name: opensuse-leap

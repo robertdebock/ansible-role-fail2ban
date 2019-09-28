@@ -60,5 +60,9 @@ provisioner:
         ansible_python_interpreter: /usr/bin/python3
       fail2ban-fedora-rawhide:
         ansible_python_interpreter: /usr/bin/python3
+  config_options:
+    defaults:
+      stdout_callback: yaml
+      bin_ansible_callbacks: true
 scenario:
   name: default
