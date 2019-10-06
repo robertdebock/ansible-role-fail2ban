@@ -21,5 +21,9 @@ provisioner:
     defaults:
       stdout_callback: yaml
       bin_ansible_callbacks: true
+  inventory:
+    group_vars:
+      all:
+        ansible_python_interpreter: /usr/bin/python3
 scenario:
   name: alpine-latest
