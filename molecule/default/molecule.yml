@@ -8,61 +8,14 @@ lint:
 driver:
   name: docker
 platforms:
-  - name: fail2ban-alpine-edge
-    image: alpine:edge
-    pre_build_image: yes
-    command: sh -c "while true ; do sleep 1 ; done"
-  - name: fail2ban-alpine-latest
-    image: alpine:latest
-    pre_build_image: yes
-    command: sh -c "while true ; do sleep 1 ; done"
-  - name: fail2ban-archlinux
-    image: archlinux/base
-    pre_build_image: yes
-  - name: fail2ban-centos-6
-    image: centos:6
-    pre_build_image: yes
-  - name: fail2ban-centos-latest
-    image: centos:latest
-    pre_build_image: yes
-  - name: fail2ban-debian-stable
-    image: debian:stable
-    pre_build_image: yes
-  - name: fail2ban-debian-unstable
-    image: debian:unstable
-    pre_build_image: yes
-  - name: fail2ban-fedora-latest
-    image: fedora:latest
-    pre_build_image: yes
-  - name: fail2ban-fedora-rawhide
-    image: fedora:rawhide
-    pre_build_image: yes
-  - name: fail2ban-opensuse-leap
-    image: opensuse/leap
-    pre_build_image: yes
-  - name: fail2ban-ubuntu-latest
-    image: ubuntu:latest
-    pre_build_image: yes
-  - name: fail2ban-ubuntu-rolling
-    image: ubuntu:rolling
-    pre_build_image: yes
-  - name: fail2ban-ubuntu-devel
-    image: ubuntu:devel
+  - name: "${image:-default}-${TOX_ENVNAME:-default}"
+    image: "${namespace}${image:-docker-fedora-systemd}:${tag:-latest}"
+    command: sh -c "while true ; do sleep 30 ; done"
     pre_build_image: yes
 provisioner:
   name: ansible
   playbooks:
-    prepare: ../resources/prepare.yml
-    converge: ../resources/playbook.yml
-  inventory:
-    host_vars:
-      fail2ban-fedora-latest:
-        ansible_python_interpreter: /usr/bin/python3
-      fail2ban-fedora-rawhide:
-        ansible_python_interpreter: /usr/bin/python3
-  config_options:
-    defaults:
-      stdout_callback: yaml
-      bin_ansible_callbacks: true
+    prepare: prepare.yml
+    converge: playbook.yml
 scenario:
   name: default
