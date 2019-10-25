@@ -96,21 +96,23 @@ Compatibility
 
 This role has been tested on these [container images](https://hub.docker.com/):
 
-|container|allow_failures|
-|---------|--------------|
-|docker-alpine-openrc|yes|
-|docker-alpine-openrc|yes|
-|docker-centos-systemd|no|
-|docker-centos-systemd|no|
-|docker-debian-systemd|yes|
-|docker-debian-systemd|yes|
-|docker-debian-systemd|yes|
-|docker-fedora-systemd|yes|
-|docker-fedora-systemd|yes|
-|opensuse/|no|
-|docker-ubuntu-systemd|yes|
-|docker-ubuntu-systemd|yes|
-|docker-ubuntu-systemd|yes|
+|container|tag|allow_failures|
+|---------|---|--------------|
+|alpine|latest|no|
+|alpine|edge|yes|
+|debian|stable|yes|
+|debian|unstable|yes|
+|debian|latest|no|
+|centos|7|no|
+|redhat|7|no|
+|centos|latest|no|
+|redhat|latest|no|
+|fedora|latest|no|
+|fedora|rawhide|yes|
+|opensuse|latest|no|
+|ubuntu|rolling|yes|
+|ubuntu|devel|yes|
+|ubuntu|latest|no|
 
 This role has been tested on these Ansible versions:
 
@@ -118,7 +120,7 @@ This role has been tested on these Ansible versions:
 - ansible~=2.8
 - git+https://github.com/ansible/ansible.git@devel
 
-The indicator '~=' means [compatible with](https://www.python.org/dev/peps/pep-0440/#compatible-release). For example 'ansible~=2.8' would pick the latest ansible-2.8, for example ansible-2.8.5.
+The indicator '\~=' means [compatible with](https://www.python.org/dev/peps/pep-0440/#compatible-release). For example 'ansible\~=2.8' would pick the latest ansible-2.8, for example ansible-2.8.6.
 
 
 
