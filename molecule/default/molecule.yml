@@ -8,9 +8,15 @@ lint:
 driver:
   name: docker
 platforms:
-  - name: "${namespace:-robertdebock-}${image:-fedora}-${TOX_ENVNAME:-default}"
+  - name: "fail2ban-${image:-fedora}${TOX_ENVNAME}"
     image: "${namespace:-robertdebock}/${image:-fedora}:${tag:-latest}"
-    command: sh -c "while true ; do sleep 30 ; done"
+    command: /sbin/init
+    tmpfs:
+      - /run
+      - /tmp
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: yes
     pre_build_image: yes
 provisioner:
   name: ansible
