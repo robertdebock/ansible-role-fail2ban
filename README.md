@@ -87,6 +87,8 @@ This role has been tested on these [container images](https://hub.docker.com/):
 
 |container|tag|allow_failures|
 |---------|---|--------------|
+|amazonlinux|1|no|
+|amazonlinux|latest|no|
 |alpine|latest|no|
 |alpine|edge|yes|
 |debian|stable|yes|
