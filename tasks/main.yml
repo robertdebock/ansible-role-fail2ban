@@ -34,6 +34,11 @@
   loop_control:
     label: "{{ item.option }}"
 
+- name: touch /var/log/auth.log
+  file:
+    path: /var/log/auth.log
+    state: touch
+
 - name: start and enable fail2ban
   service:
     name: "{{ item }}"
