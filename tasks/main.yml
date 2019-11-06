@@ -15,7 +15,7 @@
     option: "{{ item.option }}"
     value: "{{ item.value }}"
   with_items:
-    - "{{ fail2ban_configuration }}"
+    - "{{ fail2ban_base_configuration + fail2ban_configuration }}"
   notify:
     - restart fail2ban
   loop_control:
@@ -28,7 +28,7 @@
     option: "{{ item.option }}"
     value: "{{ item.value }}"
   with_items:
-    - "{{ fail2ban_jail_configuration }}"
+    - "{{ fail2ban_base_jail_configuration + fail2ban_jail_configuration }}"
   notify:
     - restart fail2ban
   loop_control:
