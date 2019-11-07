@@ -15,7 +15,7 @@
     option: "{{ item.option }}"
     value: "{{ item.value }}"
   with_items:
-    - "{{ fail2ban_configuration }}"
+    - "{{ fail2ban_base_configuration + fail2ban_configuration }}"
   notify:
     - restart fail2ban
   loop_control:
@@ -28,16 +28,22 @@
     option: "{{ item.option }}"
     value: "{{ item.value }}"
   with_items:
-    - "{{ fail2ban_jail_configuration }}"
+    - "{{ fail2ban_base_jail_configuration + fail2ban_jail_configuration }}"
   notify:
     - restart fail2ban
   loop_control:
     label: "{{ item.option }}"
 
-- name: touch /var/log/auth.log
+- name: stat auth log file
+  stat:
+    path: /var/log/auth.log
+  register: auth
+
+- name: touch auth log file
   file:
     path: /var/log/auth.log
     state: touch
+  when: auth.stat.exists is defined and not auth.stat.exists
 
 - name: start and enable fail2ban
   service:
