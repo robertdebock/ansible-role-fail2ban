@@ -5,7 +5,7 @@ fail2ban_packages:
 
 fail2ban_service: fail2ban
 
-fail2ban_configuration:
+fail2ban_base_configuration:
   - option: loglevel
     value: "{{ fail2ban_loglevel }}"
     section: Definition
@@ -13,7 +13,7 @@ fail2ban_configuration:
     value: "{{ fail2ban_logtarget }}"
     section: Definition
 
-fail2ban_jail_configuration:
+fail2ban_base_jail_configuration:
   - option: ignoreself
     value: "{{ fail2ban_ignoreself }}"
     section: DEFAULT
