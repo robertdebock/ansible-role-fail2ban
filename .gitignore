@@ -1,4 +1,4 @@
-molecule/*/.molecule
+.molecule
 *.log
 *.swp
 .tox
