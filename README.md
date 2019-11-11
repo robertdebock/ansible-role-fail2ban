@@ -36,35 +36,6 @@ The machine you are running this on, may need to be prepared.
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
 
-Role Variables
---------------
-
-These variables are set in `defaults/main.yml`:
-```yaml
----
-# defaults file for fail2ban
-
-fail2ban_loglevel: INFO
-fail2ban_logtarget: /var/log/fail2ban.log
-
-fail2ban_ignoreself: "true"
-fail2ban_ignoreips: "127.0.0.1/8 ::1"
-fail2ban_bantime: 10m
-fail2ban_findtime: 10m
-fail2ban_maxretry: 5
-fail2ban_destemail: root@localhost
-fail2ban_sender: root@{{ ansible_fqdn }}
-
-fail2ban_configuration: []
-#  - option: loglevel
-#    value: "INFO"
-#    section: Definition
-
-fail2ban_jail_configuration: []
-#  - option: ignoreself
-#    value: "true"
-#    section: DEFAULT
-```
 
 Requirements
 ------------
@@ -112,11 +83,9 @@ This role has been tested on these [container images](https://hub.docker.com/):
 
 This role has been tested on these Ansible versions:
 
-- ansible~=2.8
-- ansible~=2.9
+- ansible>=2.8, <2.9
+- ansible>=2.9
 - git+https://github.com/ansible/ansible.git@devel
-
-The indicator '\~=' means [compatible with](https://www.python.org/dev/peps/pep-0440/#compatible-release). For example 'ansible\~=2.8' would pick the latest ansible-2.8, for example ansible-2.8.6.
 
 
 
@@ -166,6 +135,7 @@ This role uses the following modules:
 - ini_file
 - package
 - service
+- stat
 ```
 
 License
