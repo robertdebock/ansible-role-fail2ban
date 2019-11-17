@@ -13,8 +13,6 @@ env:
   matrix:
     - image="amazonlinux" tag="1"
     - image="amazonlinux"
-    - image="alpine"
-    - image="alpine" tag="edge"
     # - namespace="archlinux" image="base"
     - image="debian" tag="unstable"
     - image="debian"
@@ -27,7 +25,6 @@ env:
 
 matrix:
   allow_failures:
-    - env: image="alpine" tag="edge"
     - env: image="debian" tag="unstable"
     - env: image="fedora" tag="rawhide"
 
