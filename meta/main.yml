@@ -36,7 +36,6 @@ galaxy_info:
     - fail2ban
     - installer
     - package
-    - alpine
     - centos
     - debian
     - fedora
