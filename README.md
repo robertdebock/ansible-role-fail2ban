@@ -125,7 +125,6 @@ Some variarations of the build matrix do not work. These are the variations and 
 | alpine | Service `fail2ban' needs non existent service `logger' |
 
 
-
 Testing
 -------
 
