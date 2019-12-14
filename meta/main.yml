@@ -37,6 +37,5 @@ galaxy_info:
     - installer
     - package
     - centos
-    - rhel
 
 dependencies: []
