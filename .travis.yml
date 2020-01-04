@@ -16,7 +16,6 @@ env:
   matrix:
     - image="amazonlinux" tag="1"
     - image="amazonlinux"
-    # - namespace="archlinux" image="base"
     - image="debian" tag="unstable"
     - image="debian"
     - image="centos" tag="7"

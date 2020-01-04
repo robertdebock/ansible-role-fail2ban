@@ -11,9 +11,6 @@ galaxy_info:
     - name: Amazon
       versions:
         - all
-    - name: ArchLinux
-      versions:
-        - all
     - name: Debian
       versions:
         - all
