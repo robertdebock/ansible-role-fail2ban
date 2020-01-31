@@ -24,5 +24,10 @@ provisioner:
     defaults:
       stdout_callback: yaml
       bin_ansible_callbacks: yes
+verifier:
+  name: ansible
+  lint:
+    name: ansible-lint
+    enabled: no
 scenario:
   name: default
