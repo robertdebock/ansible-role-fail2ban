@@ -14,8 +14,7 @@
     section: "{{ item.section }}"
     option: "{{ item.option }}"
     value: "{{ item.value }}"
-  with_items:
-    - "{{ fail2ban_base_configuration + fail2ban_configuration }}"
+  loop: "{{ fail2ban_base_configuration + fail2ban_configuration }}"
   notify:
     - restart fail2ban
   loop_control:
@@ -27,8 +26,7 @@
     section: "{{ item.section }}"
     option: "{{ item.option }}"
     value: "{{ item.value }}"
-  with_items:
-    - "{{ fail2ban_base_jail_configuration + fail2ban_jail_configuration }}"
+  with_items: "{{ fail2ban_base_jail_configuration + fail2ban_jail_configuration }}"
   notify:
     - restart fail2ban
   loop_control:
@@ -47,8 +45,6 @@
 
 - name: start and enable fail2ban
   service:
-    name: "{{ item }}"
+    name: "{{ fail2ban_service }}"
     state: started
     enabled: yes
-  with_items:
-    - "{{ fail2ban_service }}"
