@@ -20,9 +20,9 @@
   loop_control:
     label: "{{ item.option }}"
 
-- name: configure jail.conf
+- name: configure jail.local
   ini_file:
-    path: /etc/fail2ban/jail.conf
+    path: /etc/fail2ban/jail.local
     section: "{{ item.section }}"
     option: "{{ item.option }}"
     value: "{{ item.value }}"
