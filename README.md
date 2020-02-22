@@ -111,7 +111,7 @@ This role has been tested on these [container images](https://hub.docker.com/):
 
 |container|tags|
 |---------|----|
-|amazon|all|
+|amazon|Candidate|
 |debian|all|
 |el|7, 8|
 |fedora|all|
@@ -132,6 +132,7 @@ Some variarations of the build matrix do not work. These are the variations and 
 | variation                 | reason                 |
 |---------------------------|------------------------|
 | alpine | Service `fail2ban' needs non existent service `logger' |
+| amazonlinux:1 | file /etc/ethertypes conflicts between attempted installs of ebtables-2.0.10-16.amzn2.x86_64 and iptables-1.8.2-16.amzn2.0.1.x86_64 |
 
 
 Testing
