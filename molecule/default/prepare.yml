@@ -5,5 +5,5 @@
   become: yes
 
   roles:
-    - robertdebock.bootstrap
-    - robertdebock.epel
+    - role: robertdebock.bootstrap
+    - role: robertdebock.epel
