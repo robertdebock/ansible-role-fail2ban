@@ -5,4 +5,4 @@
   gather_facts: yes
 
   roles:
-    - ansible-role-fail2ban
+    - role: ansible-role-fail2ban
