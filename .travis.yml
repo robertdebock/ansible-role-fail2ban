@@ -14,7 +14,6 @@ env:
   global:
     namespace="robertdebock"
   matrix:
-    - image="amazonlinux" tag="latest"
     - image="debian" tag="latest"
     - image="centos" tag="7"
     - image="centos" tag="latest"
