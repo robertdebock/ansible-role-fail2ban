@@ -60,8 +60,11 @@ fail2ban_logtarget: /var/log/fail2ban.log
 
 fail2ban_ignoreself: "true"
 fail2ban_ignoreips: "127.0.0.1/8 ::1"
-fail2ban_bantime: 10m
-fail2ban_findtime: 10m
+
+# In seconds
+fail2ban_bantime: 600
+fail2ban_findtime: 600
+
 fail2ban_maxretry: 5
 fail2ban_destemail: root@localhost
 fail2ban_sender: root@{{ ansible_fqdn }}
