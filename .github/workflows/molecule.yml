@@ -11,7 +11,7 @@ on:
       - '*'
   pull_request:
   schedule:
-    - cron: '19 8 6 * *'
+    - cron: '15 12 6 * *'
 
 jobs:
   lint:
@@ -20,7 +20,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: molecule
-        uses: robertdebock/molecule-action@2.0.1
+        uses: robertdebock/molecule-action@2.1.0
         with:
           entrypoint: /usr/local/bin/molecule
           args: lint
@@ -60,7 +60,7 @@ jobs:
       - name: parse apparmor for mysql
         run: sudo apparmor_parser -R /etc/apparmor.d/usr.sbin.mysqld
       - name: molecule
-        uses: robertdebock/molecule-action@2.0.1
+        uses: robertdebock/molecule-action@2.1.0
         with:
           image: ${{ matrix.config.image }}
           tag: ${{ matrix.config.tag }}
