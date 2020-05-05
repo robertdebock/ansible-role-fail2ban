@@ -23,7 +23,7 @@ galaxy_info:
         - all
     - name: Ubuntu
       versions:
-        - bionic
+        - all
 
   galaxy_tags:
     - fail2ban

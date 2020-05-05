@@ -49,6 +49,8 @@ jobs:
           - image: "opensuse"
             tag: "latest"
           - image: "ubuntu"
+            tag: "latest"
+          - image: "ubuntu"
             tag: "1804"
     steps:
       - name: checkout
