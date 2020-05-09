@@ -107,11 +107,12 @@ This role has been tested on these [container images](https://hub.docker.com/):
 
 |container|tags|
 |---------|----|
-|debian|all|
+|amazon|2018.03|
 |el|7, 8|
-|fedora|all|
+|debian|buster, bullseye|
+|fedora|31, 32|
 |opensuse|all|
-|ubuntu|all|
+|ubuntu|focal, bionic, xenial|
 
 The minimum version of Ansible required is 2.8 but tests have been done to:
 
