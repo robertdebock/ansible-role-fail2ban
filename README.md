@@ -2,9 +2,9 @@
 
 Install and configure fail2ban on your system.
 
-|Travis|GitHub|Quality|Downloads|
-|------|------|-------|---------|
-|[![travis](https://travis-ci.com/robertdebock/ansible-role-fail2ban.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-fail2ban)|[![github](https://github.com/robertdebock/ansible-role-fail2ban/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-fail2ban/actions)|[![quality](https://img.shields.io/ansible/quality/22987)](https://galaxy.ansible.com/robertdebock/fail2ban)|[![downloads](https://img.shields.io/ansible/role/d/22987)](https://galaxy.ansible.com/robertdebock/fail2ban)|
+|Travis|GitHub|Quality|Downloads|Version|
+|------|------|-------|---------|-------|
+|[![travis](https://travis-ci.com/robertdebock/ansible-role-fail2ban.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-fail2ban)|[![github](https://github.com/robertdebock/ansible-role-fail2ban/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-fail2ban/actions)|[![quality](https://img.shields.io/ansible/quality/22987)](https://galaxy.ansible.com/robertdebock/fail2ban)|[![downloads](https://img.shields.io/ansible/role/d/22987)](https://galaxy.ansible.com/robertdebock/fail2ban)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-fail2ban.svg)](https://github.com/robertdebock/ansible-role-fail2ban/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
