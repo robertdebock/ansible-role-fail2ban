@@ -76,6 +76,8 @@
       - item.section | length > 0
   when:
     - fail2ban_configuration is defined
+    - fail2ban_configuration | length > 0
+    - fail2ban_configuration is iterable
 
 - name: test if fail2ban_jail_configuration is set correctly
   assert:
@@ -88,3 +90,5 @@
       - item.section | length > 0
   when:
     - fail2ban_jail_configuration is defined
+    - fail2ban_jail_configuration | length > 0
+    - fail2ban_jail_configuration is iterable
