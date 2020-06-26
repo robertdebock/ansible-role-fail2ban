@@ -61,7 +61,6 @@
 - name: test if fail2ban_configuration is set correctly
   assert:
     that:
-      - fail2ban_configuration | length > 0
       - fail2ban_configuration is iterable
   when:
     - fail2ban_configuration is defined
