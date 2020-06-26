@@ -1,5 +1,8 @@
 ---
 # tasks file for fail2ban
+- name: include assert.yml
+  include_tasks: assert.yml
+
 - name: install fail2ban
   package:
     name: "{{ fail2ban_packages }}"
