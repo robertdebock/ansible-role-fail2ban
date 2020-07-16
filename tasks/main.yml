@@ -7,9 +7,6 @@
   package:
     name: "{{ fail2ban_packages }}"
     state: present
-  register: fail2ban_install_fail2ban
-  until: fail2ban_install_fail2ban is succeeded
-  retries: 3
 
 - name: configure fail2ban.conf
   ini_file:
