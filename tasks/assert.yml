@@ -75,6 +75,8 @@
       - item.section is defined
       - item.section | length > 0
   loop: "{{ fail2ban_configuration }}"
+  loop_control:
+    label: "{{ item.option }}"
   when:
     - fail2ban_configuration is defined
     - fail2ban_configuration | length > 0
@@ -90,6 +92,8 @@
       - item.section is defined
       - item.section | length > 0
   loop: "{{ fail2ban_jail_configuration }}"
+  loop_control:
+    label: "{{ item.option }}"
   when:
     - fail2ban_jail_configuration is defined
     - fail2ban_jail_configuration | length > 0
