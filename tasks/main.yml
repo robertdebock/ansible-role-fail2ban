@@ -14,6 +14,7 @@
     section: "{{ item.section }}"
     option: "{{ item.option }}"
     value: "{{ item.value }}"
+    mode: "0640"
   loop: "{{ fail2ban_base_configuration + fail2ban_configuration }}"
   notify:
     - restart fail2ban
@@ -26,6 +27,7 @@
     section: "{{ item.section }}"
     option: "{{ item.option }}"
     value: "{{ item.value }}"
+    mode: "0640"
   loop: "{{ fail2ban_base_jail_configuration + fail2ban_jail_configuration }}"
   notify:
     - restart fail2ban
@@ -41,6 +43,7 @@
   file:
     path: /var/log/auth.log
     state: touch
+    mode: "0640"
   when:
     - fail2ban_auth.stat.exists is defined
     - not fail2ban_auth.stat.exists
