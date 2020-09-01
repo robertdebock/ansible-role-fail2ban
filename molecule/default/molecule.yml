@@ -7,9 +7,9 @@ dependency:
   options:
     role-file: requirements.yml
 lint: |
-  PATH=${PATH}
-  yamllint molecule/default/converge.yml
-  ansible-lint molecule/default/converge.yml
+  set -e
+  yamllint .
+  ansible-lint tasks/main.yml
 driver:
   name: docker
 platforms:
