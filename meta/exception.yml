@@ -4,3 +4,5 @@ exceptions:
     reason: "Service `fail2ban' needs non existent service `logger'"
   - variation: amazonlinux:1
     reason: "file /etc/ethertypes conflicts between attempted installs of ebtables-2.0.10-16.amzn2.x86_64 and iptables-1.8.2-16.amzn2.0.1.x86_64"
+  - variation: opensuse
+    reason: "The package fail2ban depends on python2, we switched to python3."
