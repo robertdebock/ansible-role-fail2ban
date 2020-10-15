@@ -33,6 +33,5 @@ galaxy_info:
     - fail2ban
     - installer
     - package
-    - centos
 
 dependencies: []
