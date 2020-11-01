@@ -1,3 +1,4 @@
 ---
-- robertdebock.bootstrap
-- robertdebock.epel
+roles:
+  - name: robertdebock.bootstrap
+  - name: robertdebock.epel
