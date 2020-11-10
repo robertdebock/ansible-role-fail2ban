@@ -4,7 +4,7 @@
     that:
       - fail2ban_loglevel is defined
       - fail2ban_loglevel | length > 0
-      - fail2ban_loglevel in ["CRITICAL", "ERROR", "WARNING", "NOTICE", "INFO", "DEBUG"]
+      - fail2ban_loglevel in [ "CRITICAL", "ERROR", "WARNING", "NOTICE", "INFO", "DEBUG" ]
     quiet: yes
 
 - name: test if fail2ban_logtarget is set correctly
@@ -19,7 +19,7 @@
     that:
       - fail2ban_ignoreself is defined
       - fail2ban_ignoreself | length > 0
-      - fail2ban_ignoreself in ["false", "true"]
+      - fail2ban_ignoreself in [ "false", "true" ]
     quiet: yes
 
 - name: test if fail2ban_ignoreips is set correctly
