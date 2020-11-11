@@ -33,7 +33,7 @@
   assert:
     that:
       - fail2ban_bantime is defined
-      - fail2ban_bantime | int
+      - fail2ban_bantime is number
       - fail2ban_bantime | int > 0
     quiet: yes
 
@@ -41,7 +41,7 @@
   assert:
     that:
       - fail2ban_findtime is defined
-      - fail2ban_findtime | int
+      - fail2ban_findtime is number
       - fail2ban_findtime | int > 0
     quiet: yes
 
@@ -49,7 +49,7 @@
   assert:
     that:
       - fail2ban_maxretry is defined
-      - fail2ban_maxretry | int
+      - fail2ban_maxretry is number
       - fail2ban_maxretry | int > 0
     quiet: yes
 
