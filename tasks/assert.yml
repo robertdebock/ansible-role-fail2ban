@@ -30,7 +30,7 @@
     that:
       - fail2ban_bantime is defined
       - fail2ban_bantime is number
-      - fail2ban_bantime | int > 0
+      - fail2ban_bantime > 0
     quiet: yes
 
 - name: test if fail2ban_findtime is set correctly
@@ -38,7 +38,7 @@
     that:
       - fail2ban_findtime is defined
       - fail2ban_findtime is number
-      - fail2ban_findtime | int > 0
+      - fail2ban_findtime > 0
     quiet: yes
 
 - name: test if fail2ban_maxretry is set correctly
@@ -46,7 +46,7 @@
     that:
       - fail2ban_maxretry is defined
       - fail2ban_maxretry is number
-      - fail2ban_maxretry | int > 0
+      - fail2ban_maxretry > 0
     quiet: yes
 
 - name: test if fail2ban_destemail is set correctly
