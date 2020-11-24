@@ -1,6 +1,9 @@
 ---
 # handlers file for fail2ban
+
 - name: restart fail2ban
   service:
     name: "{{ fail2ban_service }}"
     state: restarted
+  when:
+    - not ansible_check_mode | bool
