@@ -1,4 +1,5 @@
 ---
+
 - name: test if fail2ban_loglevel is set correctly
   assert:
     that:
