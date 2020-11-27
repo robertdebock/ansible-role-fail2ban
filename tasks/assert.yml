@@ -4,6 +4,7 @@
   assert:
     that:
       - fail2ban_loglevel is defined
+      - fail2ban_loglevel is string
       - fail2ban_loglevel in [ "CRITICAL", "ERROR", "WARNING", "NOTICE", "INFO", "DEBUG" ]
     quiet: yes
 
@@ -11,12 +12,14 @@
   assert:
     that:
       - fail2ban_logtarget is defined
+      - fail2ban_logtarget is string
     quiet: yes
 
 - name: test if fail2ban_ignoreself is set correctly
   assert:
     that:
       - fail2ban_ignoreself is defined
+      - fail2ban_ignoreself is string
       - fail2ban_ignoreself in [ "false", "true" ]
     quiet: yes
 
@@ -24,6 +27,7 @@
   assert:
     that:
       - fail2ban_ignoreips is defined
+      - fail2ban_ignoreips is string
     quiet: yes
 
 - name: test if fail2ban_bantime is set correctly
@@ -54,12 +58,14 @@
   assert:
     that:
       - fail2ban_destemail is defined
+      - fail2ban_destemail is string
     quiet: yes
 
 - name: test if fail2ban_sender is set correctly
   assert:
     that:
       - fail2ban_sender is defined
+      - fail2ban_sender is string
     quiet: yes
 
 - name: test if fail2ban_configuration is set correctly
@@ -74,8 +80,10 @@
   assert:
     that:
       - item.option is defined
+      - item.option is string
       - item.value is defined
       - item.section is defined
+      - item.section is string
     quiet: yes
   loop: "{{ fail2ban_configuration }}"
   loop_control:
@@ -88,8 +96,10 @@
   assert:
     that:
       - item.option is defined
+      - item.option is string
       - item.value is defined
       - item.section is defined
+      - item.section is string
     quiet: yes
   loop: "{{ fail2ban_jail_configuration }}"
   loop_control:
