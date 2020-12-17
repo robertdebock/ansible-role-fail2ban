@@ -26,7 +26,6 @@ galaxy_info:
       versions:
         - focal
         - bionic
-        - xenial
 
   galaxy_tags:
     - fail2ban
