@@ -2,8 +2,9 @@
 # tasks file for fail2ban
 
 - name: include assert.yml
-  include_tasks: assert.yml
+  import_tasks: assert.yml
   run_once: yes
+  delegate_to: localhost
 
 - name: install fail2ban
   package:
