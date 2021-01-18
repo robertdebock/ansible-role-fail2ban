@@ -35,7 +35,7 @@
     that:
       - fail2ban_bantime is defined
       - fail2ban_bantime is number
-      - fail2ban_bantime > 0
+      - fail2ban_bantime >= -1 and fail2ban_bantime !=0
     quiet: yes
 
 - name: test if fail2ban_findtime is set correctly
