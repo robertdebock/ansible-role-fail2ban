@@ -2,7 +2,7 @@
 # handlers file for fail2ban
 
 - name: restart fail2ban
-  service:
+  ansible.builtin.service:
     name: "{{ fail2ban_service }}"
     state: restarted
   when:

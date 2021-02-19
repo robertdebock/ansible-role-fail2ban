@@ -1,7 +1,7 @@
 ---
 
 - name: test if fail2ban_loglevel is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - fail2ban_loglevel is defined
       - fail2ban_loglevel is string
@@ -9,14 +9,14 @@
     quiet: yes
 
 - name: test if fail2ban_logtarget is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - fail2ban_logtarget is defined
       - fail2ban_logtarget is string
     quiet: yes
 
 - name: test if fail2ban_ignoreself is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - fail2ban_ignoreself is defined
       - fail2ban_ignoreself is string
@@ -24,14 +24,14 @@
     quiet: yes
 
 - name: test if fail2ban_ignoreips is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - fail2ban_ignoreips is defined
       - fail2ban_ignoreips is string
     quiet: yes
 
 - name: test if fail2ban_bantime is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - fail2ban_bantime is defined
       - fail2ban_bantime is number
@@ -39,7 +39,7 @@
     quiet: yes
 
 - name: test if fail2ban_findtime is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - fail2ban_findtime is defined
       - fail2ban_findtime is number
@@ -47,7 +47,7 @@
     quiet: yes
 
 - name: test if fail2ban_maxretry is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - fail2ban_maxretry is defined
       - fail2ban_maxretry is number
@@ -55,21 +55,21 @@
     quiet: yes
 
 - name: test if fail2ban_destemail is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - fail2ban_destemail is defined
       - fail2ban_destemail is string
     quiet: yes
 
 - name: test if fail2ban_sender is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - fail2ban_sender is defined
       - fail2ban_sender is string
     quiet: yes
 
 - name: test if fail2ban_configuration is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - fail2ban_configuration is iterable
     quiet: yes
@@ -77,7 +77,7 @@
     - fail2ban_configuration is defined
 
 - name: test if item in fail2ban_configuration is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - item.option is defined
       - item.option is string
@@ -93,7 +93,7 @@
     - fail2ban_configuration is iterable
 
 - name: test if fail2ban_jail_configuration is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - item.option is defined
       - item.option is string

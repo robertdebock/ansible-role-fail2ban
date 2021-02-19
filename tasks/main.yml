@@ -7,12 +7,12 @@
   delegate_to: localhost
 
 - name: install fail2ban
-  package:
+  ansible.builtin.package:
     name: "{{ fail2ban_packages }}"
     state: present
 
 - name: configure fail2ban.conf
-  ini_file:
+  community.general.ini_file:
     path: /etc/fail2ban/fail2ban.conf
     section: "{{ item.section }}"
     option: "{{ item.option }}"
@@ -25,7 +25,7 @@
     label: "{{ item.option }}"
 
 - name: configure jail.local
-  ini_file:
+  community.general.ini_file:
     path: /etc/fail2ban/jail.local
     section: "{{ item.section }}"
     option: "{{ item.option }}"
@@ -38,12 +38,12 @@
     label: "{{ item.option }}"
 
 - name: stat auth log file
-  stat:
+  ansible.builtin.stat:
     path: /var/log/auth.log
   register: fail2ban_auth
 
 - name: touch auth log file
-  file:
+  ansible.builtin.file:
     path: /var/log/auth.log
     state: touch
     mode: "0640"
@@ -52,7 +52,7 @@
     - not fail2ban_auth.stat.exists
 
 - name: start and enable fail2ban
-  service:
+  ansible.builtin.service:
     name: "{{ fail2ban_service }}"
     state: started
     enabled: yes
