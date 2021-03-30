@@ -6,4 +6,4 @@
 
   tasks:
     - name: check if connection still works
-      ping:
+      ansible.builtin.ping:
