@@ -6,7 +6,6 @@ dependency:
   name: galaxy
   options:
     role-file: requirements.yml
-    requirements-file: requirements.yml
 lint: |
   set -e
   yamllint .
@@ -23,9 +22,5 @@ platforms:
     pre_build_image: yes
 provisioner:
   name: ansible
-  config_options:
-    defaults:
-      stdout_callback: yaml
-      bin_ansible_callbacks: yes
 verifier:
   name: ansible
