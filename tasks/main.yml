@@ -11,9 +11,9 @@
     name: "{{ fail2ban_packages }}"
     state: present
 
-- name: configure fail2ban.conf
+- name: configure fail2ban.local
   community.general.ini_file:
-    path: /etc/fail2ban/fail2ban.conf
+    path: /etc/fail2ban/fail2ban.local
     section: "{{ item.section }}"
     option: "{{ item.option }}"
     value: "{{ item.value }}"
