@@ -127,6 +127,7 @@ Apache-2.0
 I'd like to thank everybody that made contributions to this repository. It motivates me, improves the code and is just fun to collaborate.
 
 - [j8r](https://github.com/j8r)
+- [gotmax23](https://github.com/gotmax23)
 - [Pandemonium1986](https://github.com/Pandemonium1986)
 - [rgevaert](https://github.com/rgevaert)
 
