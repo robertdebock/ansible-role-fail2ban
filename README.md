@@ -65,6 +65,9 @@ fail2ban_jail_configuration: []
 #  - option: ignoreself
 #    value: "true"
 #    section: DEFAULT
+
+# Path to directory containing filters to copy in filter.d
+# fail2ban_filterd_path:
 ```
 
 ## [Requirements](#requirements)
