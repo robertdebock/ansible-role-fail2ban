@@ -19,7 +19,7 @@
     group: root
     mode: "0640"
   when: fail2ban_filterd_path is defined
-  notify: 
+  notify:
     - restart fail2ban
 
 - name: configure fail2ban.local
