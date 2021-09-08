@@ -90,7 +90,6 @@
     label: "{{ item.option }}"
   when:
     - fail2ban_configuration is defined
-    - fail2ban_configuration is iterable
 
 - name: test if fail2ban_jail_configuration is set correctly
   ansible.builtin.assert:
@@ -106,4 +105,11 @@
     label: "{{ item.option }}"
   when:
     - fail2ban_jail_configuration is defined
-    - fail2ban_jail_configuration is iterable
+
+- name: test if item in fail2ban_filterd_path is set correctly
+  ansible.builtin.assert:
+    that:
+      - fail2ban_filterd_path is string
+    quiet: yes
+  when:
+    - fail2ban_filterd_path is defined
