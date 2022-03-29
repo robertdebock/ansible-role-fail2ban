@@ -108,16 +108,6 @@ The minimum version of Ansible required is 2.10, tests have been done to:
 - The current version.
 - The development version.
 
-## [Exceptions](#exceptions)
-
-Some roles can't run on a specific distribution or version. Here are some exceptions.
-
-| variation                 | reason                 |
-|---------------------------|------------------------|
-| alpine | Service `fail2ban' needs non existent service `logger' |
-| amazonlinux:1 | Based on EL6, not supported since 2020Q4. |
-| opensuse | The package fail2ban depends on python2, we switched to python3. |
-
 
 If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-fail2ban/issues)
 

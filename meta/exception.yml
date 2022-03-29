@@ -1,8 +1,0 @@
----
-exceptions:
-  - variation: alpine
-    reason: "Service `fail2ban' needs non existent service `logger'"
-  - variation: amazonlinux:1
-    reason: "Based on EL6, not supported since 2020Q4."
-  - variation: opensuse
-    reason: "The package fail2ban depends on python2, we switched to python3."
