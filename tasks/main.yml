@@ -1,17 +1,17 @@
 ---
 # tasks file for fail2ban
 
-- name: import assert.yml
+- name: Import assert.yml
   ansible.builtin.import_tasks: assert.yml
   run_once: yes
   delegate_to: localhost
 
-- name: install fail2ban
+- name: Install fail2ban
   ansible.builtin.package:
     name: "{{ fail2ban_packages }}"
     state: present
 
-- name: copy filters in filter.d
+- name: Copy filters in filter.d
   ansible.builtin.copy:
     src: "{{ fail2ban_filterd_path }}"
     dest: /etc/fail2ban/filter.d/
@@ -21,9 +21,9 @@
   when:
     - fail2ban_filterd_path is defined
   notify:
-    - restart fail2ban
+    - Restart fail2ban
 
-- name: configure fail2ban.local
+- name: Configure fail2ban.local
   community.general.ini_file:
     path: /etc/fail2ban/fail2ban.local
     section: "{{ item.section }}"
@@ -32,11 +32,11 @@
     mode: "0640"
   loop: "{{ fail2ban_base_configuration + fail2ban_configuration }}"
   notify:
-    - restart fail2ban
+    - Restart fail2ban
   loop_control:
     label: "{{ item.option }}"
 
-- name: configure jail.local
+- name: Configure jail.local
   community.general.ini_file:
     path: /etc/fail2ban/jail.local
     section: "{{ item.section }}"
@@ -45,16 +45,16 @@
     mode: "0640"
   loop: "{{ fail2ban_base_jail_configuration + fail2ban_jail_configuration }}"
   notify:
-    - restart fail2ban
+    - Restart fail2ban
   loop_control:
     label: "{{ item.option }}"
 
-- name: stat auth log file
+- name: Stat auth log file
   ansible.builtin.stat:
     path: /var/log/auth.log
   register: fail2ban_auth
 
-- name: touch auth log file
+- name: Touch auth log file
   ansible.builtin.file:
     path: /var/log/auth.log
     state: touch
@@ -63,7 +63,7 @@
     - fail2ban_auth.stat.exists is defined
     - not fail2ban_auth.stat.exists
 
-- name: start and enable fail2ban
+- name: Start and enable fail2ban
   ansible.builtin.service:
     name: "{{ fail2ban_service }}"
     state: started
