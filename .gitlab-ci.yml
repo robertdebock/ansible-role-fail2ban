@@ -10,7 +10,7 @@ variables:
 molecule:
   script:
     - if [ -f tox.ini ] ; then tox ; fi
-    - if [ ! -f tox.ini ; then molecule test ; fi
+    - if [ ! -f tox.ini ] ; then molecule test ; fi
   rules:
     - if: $CI_COMMIT_REF_NAME == "master"
   retry: 1
