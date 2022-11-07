@@ -19,7 +19,7 @@ fail2ban_base_jail_configuration:
     value: "{{ fail2ban_ignoreself }}"
     section: DEFAULT
   - option: ignoreip
-    value: "{{ fail2ban_ignoreips }}"
+    value: "{{ fail2ban_ignoreips | join(' ') }}"
     section: DEFAULT
   - option: bantime
     value: "{{ fail2ban_bantime }}"

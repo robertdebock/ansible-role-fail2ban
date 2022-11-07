@@ -49,7 +49,8 @@ fail2ban_loglevel: INFO
 fail2ban_logtarget: /var/log/fail2ban.log
 
 fail2ban_ignoreself: "true"
-fail2ban_ignoreips: "127.0.0.1/8 ::1"
+fail2ban_ignoreips:
+  - "127.0.0.1/8 ::1"
 
 # In seconds
 fail2ban_bantime: 600

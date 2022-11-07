@@ -27,7 +27,7 @@
   ansible.builtin.assert:
     that:
       - fail2ban_ignoreips is defined
-      - fail2ban_ignoreips is string
+      - fail2ban_ignoreips is iterable
     quiet: yes
 
 - name: Test if fail2ban_bantime is set correctly
