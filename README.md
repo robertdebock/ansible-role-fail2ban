@@ -78,7 +78,7 @@ fail2ban_jail_configuration: []
 
 - pip packages listed in [requirements.txt](https://github.com/robertdebock/ansible-role-fail2ban/blob/master/requirements.txt).
 
-## [Status of used roles](#status-of-requirements)
+## [State of used roles](#state-of-used-roles)
 
 The following roles are used to prepare a system. You can prepare your system in another way.
 
