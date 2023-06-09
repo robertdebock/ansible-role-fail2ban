@@ -13,6 +13,7 @@
     that:
       - fail2ban_logtarget is defined
       - fail2ban_logtarget is string
+      - fail2ban_logtarget is not none
     quiet: yes
 
 - name: assert | Test if fail2ban_ignoreself is set correctly
@@ -59,6 +60,7 @@
     that:
       - fail2ban_destemail is defined
       - fail2ban_destemail is string
+      - fail2ban_destemail is not none
     quiet: yes
 
 - name: assert | Test if fail2ban_sender is set correctly
@@ -66,6 +68,7 @@
     that:
       - fail2ban_sender is defined
       - fail2ban_sender is string
+      - fail2ban_sender is not none
     quiet: yes
 
 - name: assert | Test if fail2ban_configuration is set correctly
@@ -81,9 +84,11 @@
     that:
       - item.option is defined
       - item.option is string
+      - item.option is not none
       - item.value is defined
       - item.section is defined
       - item.section is string
+      - item.section is not none
     quiet: yes
   loop: "{{ fail2ban_configuration }}"
   loop_control:
@@ -96,9 +101,11 @@
     that:
       - item.option is defined
       - item.option is string
+      - item.option is not none
       - item.value is defined
       - item.section is defined
       - item.section is string
+      - item.section is not none
     quiet: yes
   loop: "{{ fail2ban_jail_configuration }}"
   loop_control:
@@ -110,6 +117,7 @@
   ansible.builtin.assert:
     that:
       - fail2ban_filterd_path is string
+      - fail2ban_filterd_path is not none
     quiet: yes
   when:
     - fail2ban_filterd_path is defined
