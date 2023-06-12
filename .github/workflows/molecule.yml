@@ -33,6 +33,8 @@ jobs:
             tag: "latest"
           - image: "enterpriselinux"
             tag: "8"
+          - image: "enterpriselinux"
+            tag: "latest"
           - image: "debian"
             tag: "latest"
           - image: "debian"
