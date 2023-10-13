@@ -12,8 +12,6 @@ molecule:
     - if: $CI_COMMIT_REF_NAME == "master"
   parallel:
     matrix:
-      - image: "amazonlinux"
-        tag: "latest"
       - image: "enterpriselinux"
         tag: "8"
       - image: "enterpriselinux"
