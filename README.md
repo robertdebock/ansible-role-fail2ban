@@ -1,4 +1,4 @@
-# Ansible role [fail2ban](#fail2ban)
+# [Ansible role fail2ban](#fail2ban)
 
 Install and configure fail2ban on your system.
 
