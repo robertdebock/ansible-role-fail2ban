@@ -13,13 +13,13 @@ fail2ban_base_configuration:
   - option: logtarget
     value: "{{ fail2ban_logtarget }}"
     section: Definition
-  - option: ignoreip
-    value: "{{ fail2ban_ignoreips | join(' ') }}"
-    section: DEFAULT
 
 fail2ban_base_jail_configuration:
   - option: ignoreself
     value: "{{ fail2ban_ignoreself }}"
+    section: DEFAULT
+  - option: ignoreip
+    value: "{{ fail2ban_ignoreips | join(' ') }}"
     section: DEFAULT
   - option: bantime
     value: "{{ fail2ban_bantime }}"
