@@ -4,7 +4,7 @@ Install and configure fail2ban on your system.
 
 |GitHub|GitLab|Downloads|Version|
 |------|------|---------|-------|
-|[![github](https://github.com/robertdebock/ansible-role-fail2ban/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-fail2ban/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-fail2ban/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-fail2ban)|[![downloads](https://img.shields.io/ansible/role/d/24495)](https://galaxy.ansible.com/robertdebock/fail2ban)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-fail2ban.svg)](https://github.com/robertdebock/ansible-role-fail2ban/releases/)|
+|[![github](https://github.com/robertdebock/ansible-role-fail2ban/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-fail2ban/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-fail2ban/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-fail2ban)|[![downloads](https://img.shields.io/ansible/role/d/robertdebock/fail2ban)](https://galaxy.ansible.com/robertdebock/fail2ban)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-fail2ban.svg)](https://github.com/robertdebock/ansible-role-fail2ban/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
