@@ -38,7 +38,7 @@ jobs:
           - image: "debian"
             tag: "bullseye"
           - image: "fedora"
-            tag: "38"
+            tag: "39"
           - image: "fedora"
             tag: "latest"
           - image: "fedora"
@@ -46,9 +46,9 @@ jobs:
           - image: "ubuntu"
             tag: "latest"
           - image: "ubuntu"
-            tag: "focal"
+            tag: "jammy"
           - image: "ubuntu"
-            tag: "bionic"
+            tag: "focal"
     steps:
       - name: checkout
         uses: actions/checkout@v4
