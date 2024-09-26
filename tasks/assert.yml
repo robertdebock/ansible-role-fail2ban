@@ -113,6 +113,26 @@
   when:
     - fail2ban_jail_configuration is defined
 
+- name: assert | Test fail2ban_action_configurations
+  ansible.builtin.assert:
+    that:
+      - item.option is defined
+      - item.option is string
+      - item.option is not none
+      - item.value is defined
+      - item.section is defined
+      - item.section is string
+      - item.section is not none
+      - item.action is defined
+      - item.action is string
+      - item.action is not none
+    quiet: true
+  loop: "{{ fail2ban_action_configurations }}"
+  loop_control:
+    label: "{{ item.action }} {{ item.option }}"
+  when:
+    - fail2ban_action_configurations is defined
+
 - name: assert | Test item in fail2ban_filterd_path
   ansible.builtin.assert:
     that:
