@@ -70,6 +70,12 @@ fail2ban_jail_configuration: []
 #    value: "true"
 #    section: DEFAULT
 
+fail2ban_action_configurations: []
+#  - action: iptables
+#    section: Init
+#    option: blocktype
+#    value: DROP
+
 # Path to directory containing filters to copy in filter.d
 # fail2ban_filterd_path:
 ```
