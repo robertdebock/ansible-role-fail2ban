@@ -9,7 +9,6 @@ on:
   push:
     branches:
       - master
-  pull_request:
   schedule:
     - cron: '11 6 6 * *'
 
