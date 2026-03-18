@@ -58,7 +58,7 @@ fail2ban_findtime: 600
 
 fail2ban_maxretry: 5
 fail2ban_destemail: root@localhost
-fail2ban_sender: root@{{ ansible_fqdn }}
+fail2ban_sender: root@{{ ansible_facts['fqdn'] }}
 
 fail2ban_configuration: []
 #  - option: loglevel
