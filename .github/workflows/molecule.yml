@@ -12,6 +12,7 @@ on:
   pull_request:
     branches:
       - master
+  workflow_dispatch:
   schedule:
     - cron: '11 6 6 * *'
 
