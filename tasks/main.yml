@@ -50,6 +50,19 @@
   loop_control:
     label: "{{ item.option }}"
 
+- name: Configure actions
+  community.general.ini_file:
+    path: "/etc/fail2ban/action.d/{{ item.action }}.local"
+    section: "{{ item.section }}"
+    option: "{{ item.option }}"
+    value: "{{ item.value }}"
+    mode: "0640"
+  loop: "{{ fail2ban_action_configurations }}"
+  notify:
+    - Restart fail2ban
+  loop_control:
+    label: "{{ item.action }} {{ item.option }}"
+
 - name: Stat auth log file
   ansible.builtin.stat:
     path: /var/log/auth.log
